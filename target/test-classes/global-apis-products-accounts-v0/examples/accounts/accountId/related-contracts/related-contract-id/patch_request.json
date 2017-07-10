@@ -1,0 +1,9 @@
+{
+    "contractId": "4567",
+    "product": {
+      "id": "ACCOUNTS"
+    },
+    "relationType": {
+        "id": "LINKED_WITH"
+    }
+}

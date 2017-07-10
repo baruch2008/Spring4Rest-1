@@ -1,0 +1,7 @@
+{
+   "data":{
+      "activationId":"CREDIT_OPERATIONS",
+      "name":"Activation for performing credit operations",
+      "isActive":true
+   }
+}

@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "blockId": "WRONG_ADDRESS_CUSTOMER",
+      "name": "The account user's address is wrong.",
+      "blockDate": "2013-07-18"
+    },
+    {
+      "blockId": "COURT_ORDER",
+      "name": "The account has been blocked due to a court order.",
+      "blockDate": "2015-09-09"
+    }
+  ]
+}

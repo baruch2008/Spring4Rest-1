@@ -1,0 +1,7 @@
+{
+   "data":{
+      "activationId":"DEBIT_OPERATIONS",
+      "name":"Activation for performing debit operations",
+      "isActive":true
+   }
+}

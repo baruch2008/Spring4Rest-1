@@ -1,0 +1,19 @@
+{
+  "data": {
+     "relatedContractId":"1ab23nsan3-12327",
+     "contractId": "4567",
+     "number": "ES90 0182 1642 0302 0153 5555",
+     "numberType": {
+       "id": "IBAN",
+       "name": "International Bank Account Number"
+     },
+     "product": {
+       "id": "ACCOUNTS",
+       "name": "Accounts"
+     },
+     "relationType":{
+        "id":"LINKED_WITH",
+        "name":"Linked with"
+     }
+  }
+}

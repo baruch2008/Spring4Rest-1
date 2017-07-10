@@ -1,0 +1,88 @@
+{
+  "data" : {
+    "accountId": "1234",
+    "number": "ES90 0182 1642 0302 0153 0412",
+    "numberType": {
+      "id": "IBAN",
+      "name": "International Bank Account Number"
+    },
+    "accountType" : {
+      "id" : "COMMON_ACCOUNT",
+      "name" : "Cuenta Común"
+    },
+    "title" : {
+      "id" : "VIRTUAL_ACCOUNT",
+      "name" : "Cuenta Virtual"
+    },
+    "joint" : {
+      "id" : "SINGLE",
+      "name" : "Individual"
+    },
+    "participants" : [
+      {
+        "participantId" : "15435666",
+        "participantType" : {
+          "id" : "HOLDER",
+          "name" : "Titular"
+        }
+      }
+    ],
+    "status": {
+        "id": "ACTIVATED",
+        "name": "The account is fully operative"
+    },
+    "conditions" : [
+      {
+      "conditionId": "CHRISTMAS_CAMPAIGN",
+      "name": "Christmas campaing",
+      "facts": [
+        {
+          "factType": {
+            "id": "VALUE_GREATER_THAN",
+            "name": "Value greater than"
+          },
+          "conditionAmount":{
+            "amount":500,
+            "currency": "EUR"
+          },
+          "apply":{
+              "id": "TRANSFER_AMOUNT",
+              "name": "Transfer amount"
+          }
+        }
+      ],
+      "outcomes": [
+      {
+          "outcomeType": {
+            "id": "FEE_PERCENTAGE",
+            "name": "Fee percentage"
+          },
+          "feePercentage": 10,
+          "apply":{
+              "id": "TRANSFER_AMOUNT",
+              "name": "Transfer amount"
+          }
+        }
+      ]
+    }
+    ],
+    "bank" : {
+      "bankId" : "0101",
+      "name" : "BBVA Continental",
+      "branch" : {
+        "branchId" : "4000",
+        "name" : "Oficina Principal"
+      }
+    },
+    "number" : "1913353804892",
+    "formats" : [
+      {
+        "number" : "00219113353804702365",
+        "numberType" : {
+          "id" : "CCC",
+          "name" : "Interbank Account Cod"
+        }
+      }
+    ]
+  }
+}

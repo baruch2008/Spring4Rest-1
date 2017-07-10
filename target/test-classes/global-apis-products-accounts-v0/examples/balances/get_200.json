@@ -1,0 +1,78 @@
+{
+	"data": {
+		"aggregatedAvailableBalance": {
+			"currentBalances": [
+				{
+					"amount": 15300,
+					"currency": "EUR"
+				},
+				{
+					"amount": 3400,
+					"currency": "USD"
+				}
+			],
+			"postedBalances": [
+				{
+					"amount": 15357,
+					"currency": "EUR"
+				},
+				{
+					"amount": 3400,
+					"currency": "USD"
+				}
+			],
+			"pendingBalances": [
+				{
+					"amount": -57,
+					"currency": "EUR"
+				},
+				{
+					"amount": 0,
+					"currency": "USD"
+				}
+			]
+		},
+		"aggregatedGrantedCredits": [
+			{
+				"amount": 5000,
+				"currency": "EUR"
+			},
+			{
+				"amount": 3500,
+				"currency": "USD"
+			}
+		],
+		"aggregatedDisposedBalance":{
+			"currentBalances":[
+				{
+					"amount": 300,
+					"currency": "EUR"
+				},
+				{
+					"amount": 100,
+					"currency": "USD"
+				}
+			],
+			"postedBalances":[
+				{
+					"amount": 243,
+					"currency": "EUR"
+				},
+				{
+					"amount": 100,
+					"currency": "USD"
+				}
+			],
+			"pendingBalances":[
+				{
+					"amount": 57,
+					"currency": "EUR"
+				},
+				{
+					"amount": 0,
+					"currency": "USD"
+				}
+			]
+		}
+	}
+}

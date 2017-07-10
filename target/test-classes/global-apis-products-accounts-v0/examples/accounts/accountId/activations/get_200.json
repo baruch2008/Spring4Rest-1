@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "activationId": "CREDIT_OPERATIONS",
+      "name": "OPERATIONS for performing credit operations",
+      "isActive": true
+    },
+    {
+      "activationId": "CHECK_OPERATIONS",
+      "name": "OPERATIONS for performing check operations",
+      "isActive": true
+    },
+    {
+      "activationId": "DEBIT_OPERATIONS",
+      "name": "OPERATIONS for performing debit operations",
+      "isActive": false
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+#%RAML 1.0 Library
+uses:
+  annotations:  ../../global-apis-commons-commons-v0/annotations/annotationsLibrary.raml
+
+types:
+  availableBalance:
+    type: object
+    properties:
+      currentBalances:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: array
+        required: false
+        description: |
+          This balance means the maximum expendable amount at the moment of retrieval. It\'s represented by the current available balance monetary amount and the urrency related to the current available balance.
+        items:
+          properties:
+            amount:
+              (annotations.bindingDefinition):
+                - method: "GET"
+                  input: "NONE"
+                  output: "REQUIRED"
+              type: number
+              required: false
+              description: |
+                Current available balance monetary amount.
+            currency:
+              (annotations.bindingDefinition):
+                - method: "GET"
+                  input: "NONE"
+                  output: "REQUIRED"
+              type: string
+              required: false
+              description: |
+                String based on ISO-4217 for specifying the currency related to the current available balance.
+      postedBalances:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: array
+        required: false
+        description: |
+          This balance is the maximum expendable amount calculated at the end of the last business day. It\'s represented by the posted available balance monetary amount and the currency related to the posted available balance.
+        items:
+            properties:
+              amount:
+                (annotations.bindingDefinition):
+                  - method: "GET"
+                    input: "NONE"
+                    output: "REQUIRED"
+                type: number
+                required: false
+                description: |
+                  Posted available balance monetary amount.
+              currency:
+                (annotations.bindingDefinition):
+                  - method: "GET"
+                    input: "NONE"
+                    output: "REQUIRED"
+                type: string
+                required: false
+                description: |
+                  String based on ISO-4217 for specifying the currency related to the posted available balance.
+      pendingBalances:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: array
+        required: false
+        description: |
+          This balance is the aggregated amount of all pending transactions. This amount is the result of substracting postedBalance to currentBalance. It\'s represented by the pending available balance monetary amount and the currency related to the pending available balance.
+        items:
+          properties:
+            amount:
+              (annotations.bindingDefinition):
+                - method: "GET"
+                  input: "NONE"
+                  output: "REQUIRED"
+              type: number
+              required: false
+              description: |
+                Pending available balance monetary amount.
+            currency:
+              (annotations.bindingDefinition):
+                - method: "GET"
+                  input: "NONE"
+                  output: "REQUIRED"
+              type: string
+              required: false
+              description: |
+                String based on ISO-4217 for specifying the currency related to the pending available balance.

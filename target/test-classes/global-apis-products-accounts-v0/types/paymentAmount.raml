@@ -1,0 +1,61 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../global-apis-commons-commons-v0/annotations/annotationsLibrary.raml
+
+types:
+  paymentAmount:
+    type: object
+    properties:
+      id:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: string
+        required: false
+        enum: [ MINIMUM_AMOUNT, MINIMUM_AMOUNT_TO_AVOID_INTEREST, TOTAL_DEBT_AMOUNT ]
+        (annotations.enumDescription):
+          - MINIMUM_AMOUNT: Minimum amount that must be paid to avoid failing payments.
+          - MINIMUM_AMOUNT_TO_AVOID_INTEREST: Minimum amount that can be paid to not incur on interest charges.
+          - TOTAL_DEBT_AMOUNT: Total amount that can be paid. This amount matches with the existing disposedBalance.currentBalances amount at the end of the last period's cutoffDate. This amount includes all account debts, even deferred payments.
+          - LAST_PERIOD_AMOUNT: Total spent amount during the last period, including the paid terms from financing payments.
+        description: |
+          Payment amount identifier.
+      name:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: string
+        required: false
+        description: |
+          Payment amount name.
+      values:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: array
+        required: false
+        description: |
+          Payment amount value. This amount may be provided in several currencies (depending on the country). It\'s represented by the payment amount and the currency related to the payment amount.
+        items:
+          properties:
+            amount:
+              (annotations.bindingDefinition):
+                - method: "GET"
+                  input: "NONE"
+                  output: "REQUIRED"
+              type: number
+              required: false
+              description: |
+                Payment amount.
+            currency:
+              (annotations.bindingDefinition):
+                - method: "GET"
+                  input: "NONE"
+                  output: "REQUIRED"
+              type: string
+              required: false
+              description: |
+                String based on ISO-4217 for specifying the currency related to the payment amount.

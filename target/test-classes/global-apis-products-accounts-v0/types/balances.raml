@@ -1,0 +1,38 @@
+#%RAML 1.0 Library
+uses:
+  annotations:  ../../global-apis-commons-commons-v0/annotations/annotationsLibrary.raml
+  aggregatedAvailableBalance: aggregatedAvailableBalance.raml
+  aggregatedDisposedBalance: aggregatedDisposedBalance.raml
+  aggregatedGrantedCredit: aggregatedGrantedCredit.raml
+
+types:
+  balances:
+    type: object
+    properties:
+      aggregatedAvailableBalance:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "OPTIONAL"
+        type: aggregatedAvailableBalance.aggregatedAvailableBalance
+        required: false
+        description: |
+          Available balance associated to all the accounts of the user.
+      aggregatedGrantedCredits:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: aggregatedGrantedCredit.aggregatedGrantedCredit[]
+        required: false
+        description: |
+          Granted credit associated to all the credit accounts of the user. This amount may be provided in several currencies (depending on the country).
+      aggregatedDisposedBalance:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: aggregatedDisposedBalance.aggregatedDisposedBalance
+        required: false
+        description: |
+          Disposed balance associated to all the accounts of the user.

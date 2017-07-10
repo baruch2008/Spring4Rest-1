@@ -1,0 +1,358 @@
+{
+  "data": [
+    {
+      "accountId": "1234",
+      "number": "ES90 0182 1642 0302 0153 0412",
+      "numberType": {
+        "id": "IBAN",
+        "name": "International Bank Account Number"
+      },
+      "accountType": {
+        "id": "CREDIT_CURRENCY_ACCOUNT",
+        "name": "Credit currency account."
+      },
+      "title": {
+        "id": "YOUNG_ACCOUNT",
+        "name": "Young account."
+      },
+      "alias": "Work account",
+      "openingDate": "2010-02-02",
+      "currencies": [
+        {
+          "currency": "EUR",
+          "isMajor": false
+        },
+        {
+          "currency": "USD",
+          "isMajor": true
+        }
+      ],
+      "grantedCredits": [
+        {
+          "amount": 3000,
+          "currency": "EUR"
+        },
+        {
+          "amount": 3000,
+          "currency": "USD"
+        }
+      ],
+      "availableBalance": {
+        "currentBalances": [
+          {
+            "amount": 500,
+            "currency": "EUR"
+          },
+          {
+            "amount": 556.05,
+            "currency": "USD"
+          }
+        ],
+        "postedBalances": [
+          {
+            "amount": 550,
+            "currency": "EUR"
+          },
+          {
+            "amount": 611.66,
+            "currency": "USD"
+          }
+        ],
+        "pendingBalances": [
+          {
+            "amount": -50,
+            "currency": "EUR"
+          },
+          {
+            "amount": -55.61,
+            "currency": "USD"
+          }
+        ]
+      },
+      "disposedBalance": {
+        "currentBalances": [
+          {
+            "amount": 2500,
+            "currency": "EUR"
+          },
+          {
+            "amount": 2443.95,
+            "currency": "USD"
+          }
+        ],
+        "postedBalances": [
+          {
+            "amount": 2450,
+            "currency": "EUR"
+          },
+          {
+            "amount": 2388.34,
+            "currency": "USD"
+          }
+        ],
+        "pendingBalances": [
+          {
+            "amount": 50,
+            "currency": "EUR"
+          },
+          {
+            "amount": 55.61,
+            "currency": "USD"
+          }
+        ]
+      },
+      "status": {
+        "id": "BLOCKED",
+        "name": "Account blocked"
+      },
+      "image": {
+        "id": "IMAGE_ACCOUNT",
+        "name": "Image of the account",
+        "url": "http://.../image.jpg"
+      },
+      "indicators": [
+        {
+          "indicatorId":"ORIGIN_TRANSFER_TO_ACCOUNT",
+          "name": "The account can be the origin of a transfer.",
+          "isActive": true
+        },
+        {
+          "indicatorId":"DESTINATION_TRANSFER_FROM_ACCOUNT",
+          "name": "The account can be the destination of a transfer.",
+          "isActive": false
+        },
+        {
+          "indicatorId":"ORIGIN_INTERNAL_TRANSFER_TO_ACCOUNT",
+          "name": "The account can be the origin of a transfer between user's internal accounts.",
+          "isActive": true
+        },
+        {
+          "indicatorId":"DESTINATION_INTERNAL_TRANSFER_FROM_ACCOUNT",
+          "name": "The account can be the destination of a transfer between user's internal accounts.",
+          "isActive": true
+        },
+        {
+         "indicatorId":"ORIGIN_INTERNATIONAL_TRANSFER_TO_ACCOUNT",
+         "name": "The account can be the origin of an international transfer to another account.",
+         "isActive": true
+        },
+        {
+          "indicatorId":"ORIGIN_INMEDIATE_PAYMENT",
+          "name": "The account can be origin for inmediate payment.",
+          "isActive": true
+        },
+        {
+          "indicatorId":"ORIGIN_SOLIDARY_CONTRIBUTION",
+          "name": "The account can be origin to a solidary contribution.",
+          "isActive": true
+        },
+        {
+          "indicatorId":"ORIGIN_MOBILE_CASH",
+          "name": "The account can be origin to send cash to a mobile device.",
+          "isActive": true
+        },
+        {
+          "indicatorId":"DESTINATION_INTERNATIONAL_TRANSFER_FROM_ACCOUNT",
+          "name": "The account can be destination of an international transfer from another account.",
+          "isActive": true
+        },
+        {
+          "indicatorId":"ASSOCIABLE_TO_PHONE_FOR_SPEI",
+          "name": "The account can be associated to a phone number for SPEI functionality.",
+          "isActive": true
+        },
+        {
+          "indicatorId":"ORIGIN_CURRENCY_EXCHANGE",
+          "name": "The account can be used for request foreign currency.",
+          "isActive": true
+        },
+        {
+          "indicatorId":"ORIGIN_SERVICE_PAYMENT",
+          "name": "The account can be used for service payment.",
+          "isActive": true
+        },
+        {
+          "indicatorId":"ORIGIN_TRANSFER_TO_CARD",
+          "name": "The account can be the origin of a transfer to a debit or credit card.",
+          "isActive": true
+        },
+        {
+          "indicatorId":"DESTINATION_TRANSFER_FROM_CARD",
+          "name": "The account can be the destination of a transfer from a debit or credit card.",
+          "isActive": true
+        },
+        {
+          "indicatorId":"ORIGIN_TAX_PAYMENT",
+          "name": "The account can be used for paying public taxes.",
+          "isActive": false
+        },
+        {
+          "indicatorId":"ORIGIN_INTERNATIONAL_TRANSFER_TO_CARD",
+          "name": "The account can be the origin of an international transfer to a card.",
+          "isActive": false
+        },
+        {
+          "indicatorId":"DESTINATION_INTERNATIONAL_TRANSFER_FROM_CARD",
+          "name": "The account can be the destination of an international transfer to a card.",
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "accountId": "1235",
+      "number": "ES90 0182 1642 0302 0153 7555",
+      "numberType": {
+        "id": "IBAN",
+        "name": "International Bank Account Number"
+      },
+      "accountType": {
+        "id": "COMMON_ACCOUNT",
+        "name": "Common account."
+      },
+      "title": {
+        "id": "YOUNG_ACCOUNT",
+        "name": "Young account."
+      },
+      "alias": "Joint account with my father",
+      "openingDate": "2011-09-01",
+      "currencies": [
+        {
+          "currency": "EUR",
+          "isMajor": false
+        },
+        {
+          "currency": "USD",
+          "isMajor": true
+        }
+      ],
+      "availableBalance": {
+       "currentBalances": [
+          {
+            "amount": 500,
+            "currency": "EUR"
+          },
+          {
+            "amount": 556.05,
+            "currency": "USD"
+          }
+        ],
+        "postedBalances": [
+          {
+            "amount": 550,
+            "currency": "EUR"
+          },
+          {
+            "amount": 611.66,
+            "currency": "USD"
+          }
+        ],
+        "pendingBalances": [
+          {
+            "amount": -50,
+            "currency": "EUR"
+          },
+          {
+            "amount": -55.61,
+            "currency": "USD"
+          }
+        ]
+      },
+      "status": {
+        "id": "ACTIVATED",
+        "name": "Activated account"
+      },
+      "image": {
+        "id": "IMAGE_ACCOUNT",
+        "name": "Image of the account",
+        "url": "http://.../image.jpg"
+      },
+      "indicators": [
+        {
+          "indicatorId":"ORIGIN_TRANSFER_TO_ACCOUNT",
+          "name": "The account can be the origin of a transfer.",
+          "isActive": true
+        },
+        {
+          "indicatorId":"DESTINATION_TRANSFER_FROM_ACCOUNT",
+          "name": "The account can be the destination of a transfer.",
+          "isActive": false
+        },
+        {
+          "indicatorId":"ORIGIN_INTERNAL_TRANSFER_TO_ACCOUNT",
+          "name": "The account can be the origin of a transfer between user's internal accounts.",
+          "isActive": true
+        },
+        {
+          "indicatorId":"DESTINATION_INTERNAL_TRANSFER_FROM_ACCOUNT",
+          "name": "The account can be the destination of a transfer between user's internal accounts.",
+          "isActive": true
+        },
+        {
+         "indicatorId":"ORIGIN_INTERNATIONAL_TRANSFER_TO_ACCOUNT",
+         "name": "The account can be the origin of an international transfer to another account.",
+         "isActive": true
+        },
+        {
+          "indicatorId":"ORIGIN_INMEDIATE_PAYMENT",
+          "name": "The account can be origin for inmediate payment.",
+          "isActive": false
+        },
+        {
+          "indicatorId":"ORIGIN_SOLIDARY_CONTRIBUTION",
+          "name": "The account can be origin to a solidary contribution.",
+          "isActive": false
+        },
+        {
+          "indicatorId":"ORIGIN_MOBILE_CASH",
+          "name": "The account can be origin to send cash to a mobile device.",
+          "isActive": false
+        },
+        {
+          "indicatorId":"DESTINATION_INTERNATIONAL_TRANSFER_FROM_ACCOUNT",
+          "name": "The account can be destination of an international transfer from another account.",
+          "isActive": true
+        },
+        {
+          "indicatorId":"ASSOCIABLE_TO_PHONE_FOR_SPEI",
+          "name": "The account can be associated to a phone number for SPEI functionality.",
+          "isActive": true
+        },
+        {
+          "indicatorId":"ORIGIN_CURRENCY_EXCHANGE",
+          "name": "The account can be used for request foreign currency.",
+          "isActive": false
+        },
+        {
+          "indicatorId":"ORIGIN_SERVICE_PAYMENT",
+          "name": "The account can be used for service payment.",
+          "isActive": false
+        },
+        {
+          "indicatorId":"ORIGIN_TRANSFER_TO_CARD",
+          "name": "The account can be the origin of a transfer to a debit or credit card.",
+          "isActive": false
+        },
+        {
+          "indicatorId":"DESTINATION_TRANSFER_FROM_CARD",
+          "name": "The account can be the destination of a transfer from a debit or credit card.",
+          "isActive": false
+        },
+        {
+          "indicatorId":"ORIGIN_TAX_PAYMENT",
+          "name": "The account can be used for paying public taxes.",
+          "isActive": false
+        },
+        {
+          "indicatorId":"ORIGIN_INTERNATIONAL_TRANSFER_TO_CARD",
+          "name": "The account can be the origin of an international transfer to a card.",
+          "isActive": false
+        },
+        {
+          "indicatorId":"DESTINATION_INTERNATIONAL_TRANSFER_FROM_CARD",
+          "name": "The account can be the destination of an international transfer to a card.",
+          "isActive": false
+        }
+      ]
+    }
+  ]
+}

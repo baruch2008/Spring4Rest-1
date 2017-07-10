@@ -1,0 +1,91 @@
+{
+   "data":{
+      "accountId":"01-1234",
+      "number":"1244541234",
+      "numberType":{
+         "id":"LIC",
+         "name":"Local Internal Code"
+      },
+      "formats":[
+         {
+            "number":"098765412 1244541234",
+            "numberType":{
+               "id":"RN",
+               "name":"Account with Routing Number"
+            }
+         }
+      ],
+      "accountType":{
+         "id":"COMMON_ACCOUNT",
+         "name":"Common account."
+      },
+   "title":{
+      "id":"CHECKING",
+      "name":"Checking account."
+   },
+   "joint":{
+      "id":"SINGLE",
+      "name":"Individual"
+   },
+   "openingDate":"2010-02-02",
+   "status":{
+      "id":"ABANDONED",
+      "name":"The account is abandoned"
+   },
+   "relatedContracts":[
+      {
+         "relatedContractId":"01-1234-4567",
+         "number":"1111222233334567",
+         "numberType":{
+            "id":"LIC",
+            "name":"Local Internal Code"
+         },
+         "product":{
+            "id":"CARDS",
+            "name":"Cards"
+         },
+         "relationType":{
+            "id":"LINKED_WITH",
+            "name":"Linked with"
+         }
+      }
+   ],
+   "currencies":[
+      {
+         "currency":"USD",
+         "isMajor":true
+      }
+   ],
+   "availableBalance":{
+      "currentBalances":[
+         {
+            "amount":556.05,
+            "currency":"USD"
+         }
+      ],
+      "postedBalances":[
+         {
+            "amount":611.66,
+            "currency":"USD"
+         }
+      ],
+      "pendingBalances":[
+         {
+            "amount":-55.61,
+            "currency":"USD"
+         }
+      ]
+   },
+   "participants":[
+      {
+         "participantId":"1234123276",
+         "firstName":"Ricardo",
+         "lastName":"Martin",
+         "participantType":{
+            "id":"HOLDER",
+            "name":"Holder"
+         }
+      }
+   ]
+}
+}

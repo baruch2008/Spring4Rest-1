@@ -1,0 +1,40 @@
+#%RAML 1.0 Library
+uses:
+  annotations:  ../../global-apis-commons-commons-v0/annotations/annotationsLibrary.raml
+
+types:
+  customizedFormats:
+    type: array
+    items:
+      properties:
+          customizedFormatId:
+            (annotations.bindingDefinition):
+              - method: "GET"
+                input: "NONE"
+                output: "REQUIRED"
+              - method: "POST"
+                input: "REQUIRED"
+                output: "OPTIONAL"
+            enum: [SPEI, SIMPLE_ACCOUNT]
+            (annotations.enumDescription):
+              - SPEI: Electronic Payments Interbanking System (Sistema de Pagos Electrónicos Interbancarios). This format is used for making transfers easily by only knowing the phone number of the transferee
+              - SIMPLE_ACCOUNT: This attribute is used to manage the Simple Account number value.
+            type: string
+            required: false
+            description: |
+              Identifier customized format associated to the value of account number.
+          value:
+            (annotations.bindingDefinition):
+              - method: "GET"
+                input: "NONE"
+                output: "REQUIRED"
+              - method: "PUT"
+                input: "REQUIRED"
+                output: "OPTIONAL"
+              - method: "POST"
+                input: "REQUIRED"
+                output: "OPTIONAL"
+            type: string
+            required: false
+            description: |
+              Value customized of account number.

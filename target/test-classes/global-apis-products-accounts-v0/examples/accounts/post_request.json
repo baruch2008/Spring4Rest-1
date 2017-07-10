@@ -1,0 +1,24 @@
+{
+  "accountType" : {
+    "id" : "CREDIT_CURRENCY_ACCOUNT"
+  },
+  "title" : {
+    "id" : "VIRTUAL_ACCOUNT"
+  },
+  "joint" : {
+    "id" : "SINGLE"
+  },
+  "participants" : [
+    {
+      "participantId" : "15435666",
+      "participantType" : {
+        "id" : "HOLDER"
+      }
+    }
+  ],
+  "conditions" : [
+    {
+      "conditionId" : "CHRISTMAS_CAMPAIGN"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "participantId": "1234123276",
+      "firstName": "Ricardo",
+      "lastName": "Martin",
+      "participantType": {
+        "id": "HOLDER",
+        "name": "Holder"
+      }
+    }
+  ]
+}

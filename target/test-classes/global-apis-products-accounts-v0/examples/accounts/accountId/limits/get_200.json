@@ -1,0 +1,18 @@
+{
+  "data":[
+    {
+      "limitId":"MAXIMUM_CREDIT",
+      "name":"Maximun credit limit.",
+      "amountLimits":[
+        {
+          "amount":6790000.00,
+          "currency":"CLP"
+        },
+        {
+          "amount":10000.00,
+          "currency":"USD"
+        }
+      ]
+    }
+  ]
+}

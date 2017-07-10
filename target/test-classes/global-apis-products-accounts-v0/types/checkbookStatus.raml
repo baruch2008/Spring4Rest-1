@@ -1,0 +1,34 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../global-apis-commons-commons-v0/annotations/annotationsLibrary.raml
+
+types:
+  checkbookStatus:
+    type: object
+    properties:
+      id:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: string
+        enum: ["REQUEST", "REQUEST_PROCESSED", "REQUEST_ERROR", "SENT_PRINT", "CANCELED", "RESERVED"]
+        (annotations.enumDescription):
+          - REQUEST: The checkbook has been requested.
+          - REQUEST_PROCESSED: The checkbook's request has been processed.
+          - REQUEST_ERROR: The checkbook's request has been failed.
+          - SENT_PRINT: The checkbook is going to be sent for printing.
+          - CANCELED: The checkbook has been canceled.
+          - RESERVED: The checkbook has been reserved.
+        description: |
+          Identifier associated to the checkbook status.
+        required: false
+      name:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: string
+        description: |
+          Name associated to the checkbook status.
+        required: false  

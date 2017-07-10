@@ -1,0 +1,7 @@
+{
+   "data":{
+      "activationId":"CHECK_OPERATIONS",
+      "name":"Activation for performing check operations",
+      "isActive":true
+   }
+}

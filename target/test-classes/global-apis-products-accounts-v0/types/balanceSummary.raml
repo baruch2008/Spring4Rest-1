@@ -1,0 +1,102 @@
+#%RAML 1.0 Library
+uses:
+  annotations:  ../../global-apis-commons-commons-v0/annotations/annotationsLibrary.raml
+
+types:
+  balanceSummary:
+    type: object
+    properties:
+      credits:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: array
+        required: false
+        description: |
+           Total credits made in the account on the current day. There will be an element in the array for each type of currency with which the account operates (in the case of multicurrency accounts, there will be two or more, for accounts in one currency, one element).
+        items:
+          properties:
+            totalTransactions:
+              (annotations.bindingDefinition):
+                - method: "GET"
+                  input: "NONE"
+                  output: "REQUIRED"
+              type: number
+              required: false
+              description: |
+                Total number of credits transactions for the current day.
+            balance:
+              (annotations.bindingDefinition):
+                - method: "GET"
+                  input: "NONE"
+                  output: "REQUIRED"
+              type: object
+              description: |
+                Total monetary amount of the credit transactions posted along the current day.
+              properties:
+                amount:
+                  (annotations.bindingDefinition):
+                    - method: "GET"
+                      input: "NONE"
+                      output: "REQUIRED"
+                  type: number
+                  required: false
+                  description: |
+                    Total amount of credits transactions for the current day.
+                currency:
+                  (annotations.bindingDefinition):
+                    - method: "GET"
+                      input: "NONE"
+                      output: "REQUIRED"
+                  type: string
+                  required: false
+                  description: |
+                    String based on ISO-4217 for specifying the currency related to the total credits amount for the current day.
+      debits:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: array
+        required: false
+        description: |
+         Total debits made in the account on the current day. There will be an element in the array for each type of currency with which the account operates (in the case of multicurrency accounts, there will be two or more, for accounts in one currency, one element).
+        items:
+          properties:
+            totalTransactions:
+              (annotations.bindingDefinition):
+                - method: "GET"
+                  input: "NONE"
+                  output: "REQUIRED"
+              type: number
+              required: false
+              description: |
+                Total number of debits transactions for the current day.
+            balance:
+              (annotations.bindingDefinition):
+                - method: "GET"
+                  input: "NONE"
+                  output: "REQUIRED"
+              type: object
+              description: |
+                Total monetary amount of the credit transactions posted along the current day.
+              properties:
+                amount:
+                  (annotations.bindingDefinition):
+                    - method: "GET"
+                      input: "NONE"
+                      output: "REQUIRED"
+                  type: number
+                  required: false
+                  description: |
+                    Total amount of debits transactions for the current day.
+                currency:
+                  (annotations.bindingDefinition):
+                    - method: "GET"
+                      input: "NONE"
+                      output: "REQUIRED"
+                  type: string
+                  required: false
+                  description: |
+                    String based on ISO-4217 for specifying the currency related to the total debits amount for the current day.

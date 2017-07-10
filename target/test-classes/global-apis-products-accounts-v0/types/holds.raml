@@ -1,0 +1,59 @@
+#%RAML 1.0 Library
+uses:
+  annotations:  ../../global-apis-commons-commons-v0/annotations/annotationsLibrary.raml
+
+types:
+  holds:
+    type: array
+    items:
+      properties:
+        holdId:
+          (annotations.bindingDefinition):
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          enum: [CHECK_INCOME, CHECK_INCOME_TODAY]
+          (annotations.enumDescription):
+            - CHECK_INCOME: The held amount refers to the total incoming amount from deposited checks that have not been posted yet.
+            - CHECK_INCOME_TODAY: The held amount today refers to the total incoming amount from deposited checks that have not posted in the day.
+          required: false
+          description: |
+            Hold identifier.
+        name:
+          (annotations.bindingDefinition):
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          type: string
+          required: false
+          description: |
+            Hold description.
+        totalHeldAmounts:
+          (annotations.bindingDefinition):
+            - method: "GET"
+              input: "NONE"
+              output: "REQUIRED"
+          type: array
+          required: false
+          description: |
+            Total held amount. This amount is the aggregated amount of all of the held incomes for the current kind of hold. This amount may be provided in several currencies (depending on the country).
+          items:
+            properties:
+              amount:
+                (annotations.bindingDefinition):
+                  - method: "GET"
+                    input: "NONE"
+                    output: "REQUIRED"
+                type: number
+                required: false
+                description: |
+                  Monetary amount.
+              currency:
+                (annotations.bindingDefinition):
+                  - method: "GET"
+                    input: "NONE"
+                    output: "REQUIRED"
+                type: string
+                required: false
+                description: |
+                  String based on ISO-4217 for specifying the currency related to the amount.

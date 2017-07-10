@@ -1,0 +1,30 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../global-apis-commons-commons-v0/annotations/annotationsLibrary.raml
+
+types:
+  checkbookFormat:
+    type: object
+    properties:
+      id:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: string
+        enum: ["CONTINUOUS_PAPER", "CHECKBOOK"]
+        (annotations.enumDescription):
+          - CONTINUOUS_PAPER: It is paper which is designed for use with dot-matrix and line printers with appropriate paper-feed mechanisms.
+          - CHECKBOOK: It is a document that orders a bank to pay a specific amount of money from a person's account to the person in whose name the cheque has been issued.
+        description: |
+          Identifier associated to the checkbook format.
+        required: false
+      name:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: string
+        description: |
+          Description associated to the checkbook format.
+        required: false  

@@ -1,0 +1,196 @@
+{
+  "data": [
+    {
+      "id": "1hhn22-wepaq44g",
+      "localAmount": {
+        "amount": 588.75,
+        "currency": "EUR"
+      },
+      "moneyFlow": {
+        "id": "EXPENSE",
+        "name": "Expense"
+      },
+      "concept": "Payment in Amazon Europe for 588.75€",
+      "transactionType": {
+        "id": "PURCHASE",
+        "name": "Purchase"
+      },
+      "operationDate": "2016-02-28T16:41:41.090Z",
+      "accountedDate": "2016-02-28T16:41:41.800Z",
+      "financingType": {
+        "id": "FINANCING_AVAILABLE",
+        "name": "Non financing"
+      },
+      "status": {
+        "id": "SETTLED",
+        "name": "Settled"
+      },
+      "contract": {
+        "id": "73yuhe-fjn48y-tog3lf-qqodho",
+        "number": "ES4500123213494919812730",
+        "numberType": {
+          "id": "IBAN",
+          "name": "IBAN"
+        },
+        "product": {
+          "id": "ACCOUNTS",
+          "name": "ACCOUNTS"
+        },
+        "alias": "mi cuenta"
+      },
+      "tags": [
+        "AMAZON",
+        "GEFORCE",
+        "ENJOY"
+      ],
+      "category": {
+        "id": "CATEGORY_1",
+        "name": "Category 1 name"
+      }
+    },
+    {
+      "id": "1hhn22-wepaq44g",
+      "localAmount": {
+        "amount": 19.34,
+        "currency": "EUR"
+      },
+      "moneyFlow": {
+        "id": "INCOME",
+        "name": "income"
+      },
+      "concept": "Refund from PCCOMPONENTES",
+      "transactionType": {
+        "id": "REFUND",
+        "name": "Refund"
+      },
+      "operationDate": "2016-01-21T16:41:41.090Z",
+      "accountedDate": "2016-01-21T16:41:41.800Z",
+      "financingType": {
+        "id": "NON_FINANCING",
+        "name": "Non financing"
+      },
+      "status": {
+        "id": "SETTLED",
+        "name": "Settled"
+      },
+      "contract": {
+        "id": "73yuhe-fjn48y-tog3lf-qqodho",
+        "number": "ES4500123213494919812730",
+        "numberType": {
+          "id": "IBAN",
+          "name": "IBAN"
+        },
+        "product": {
+          "id": "ACCOUNTS",
+          "name": "ACCOUNTS"
+        },
+        "alias": "mi cuenta"
+      },
+      "category": {
+        "id": "CATEGORY_1",
+        "name": "Category 1 name"
+      }
+    },
+    {
+      "id": "55rmsdm-wepaq44g",
+      "localAmount": {
+        "amount": 37.56,
+        "currency": "EUR"
+      },
+      "originAmount": {
+        "amount": 40,
+        "currency": "USD"
+      },
+      "moneyFlow": {
+        "id": "EXPENSE",
+        "name": "Expense"
+      },
+      "concept": "Withdrawal of cash on ATM (40 USD)",
+      "transactionType": {
+        "id": "CASH_WITHDRAWAL",
+        "name": "Cash Withdrawal"
+      },
+      "operationDate": "2016-02-28T16:41:41.090Z",
+      "accountedDate": "2016-02-28T16:41:41.800Z",
+      "financingType": {
+        "id": "NON_FINANCING",
+        "name": "Non financing"
+      },
+      "status": {
+        "id": "SETTLED",
+        "name": "Settled"
+      },
+      "contract": {
+        "id": "73yuhe-fjn48y-tog3lf-qqodho",
+        "number": "ES4500123213494919812730",
+        "numberType": {
+          "id": "IBAN",
+          "name": "IBAN"
+        },
+        "product": {
+          "id": "ACCOUNTS",
+          "name": "ACCOUNTS"
+        },
+        "alias": "mi cuenta"
+      },
+      "category": {
+        "id": "CATEGORY_1",
+        "name": "Category 1 name"
+      },
+      "additionalInformation": {
+        "additionalData": "Withdrawal in ATM Chase @Fifth avenue"
+      }
+    },
+    {
+      "id": "55rmsdm-wepaq44g",
+      "localAmount": {
+        "amount": 21.50,
+        "currency": "EUR"
+      },
+      "moneyFlow": {
+        "id": "INCOME",
+        "name": "income"
+      },
+      "concept": "Withdrawal of cash on ATM (40 USD)",
+      "transactionType": {
+        "id": "CASH_INCOME",
+        "name": "Cash Income"
+      },
+      "operationDate": "2016-02-28T16:41:41.090Z",
+      "accountedDate": "2016-02-28T16:41:41.800Z",
+      "financingType": {
+        "id": "NON_FINANCING",
+        "name": "Non financing"
+      },
+      "status": {
+        "id": "SETTLED",
+        "name": "Settled"
+      },
+      "contract": {
+        "id": "73yuhe-fjn48y-tog3lf-qqodho",
+        "number": "ES4500123213494919812730",
+        "numberType": {
+          "id": "IBAN",
+          "name": "IBAN"
+        },
+        "product": {
+          "id": "ACCOUNTS",
+          "name": "ACCOUNTS"
+        },
+        "alias": "mi cuenta"
+      }
+    }
+  ],
+  "pagination": {
+    "links": {
+      "first": "https://www.bbvaapis.com/accounts/v0/accounts/1234/transactions",
+      "last": "https://www.bbvaapis.com/accounts/v0/accounts/1234/transactions?paginationKey=gdfw254sf",
+      "previous": "https://www.bbvaapis.com/accounts/v0/accounts/1234/transactions?cpaginationKey=dwer342sf",
+      "next": "https://www.bbvaapis.com/accounts/v0/accounts/1234/transactions?paginationKey=qazx687sf"
+    },
+    "page": 1,
+    "totalPages": 3,
+    "totalElements": 6,
+    "pageSize": 2
+  }
+}

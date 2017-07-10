@@ -1,0 +1,44 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../global-apis-commons-commons-v0/annotations/annotationsLibrary.raml
+
+types:
+  branch:
+    type: object
+    properties:
+      branchId:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+          - method: "POST"
+            input: "NONE"
+            output: "REQUIRED"
+        type: string
+        description: |
+          Unique branch identifier.
+        required: false
+      name:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+          - method: "POST"
+            input: "NONE"
+            output: "REQUIRED"
+        (annotations.countryException):
+          - country: US
+            description: Branch name is optional in the US                    
+        type: string
+        description: |
+          Branch name.
+        required: false
+      costCenter:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "OPTIONAL"
+        type: string
+        description: |
+            A department or unit within a bank to which costs may be charged for accounting purposes.
+        required: false

@@ -1,0 +1,152 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../global-apis-commons-commons-v0/annotations/annotationsLibrary.raml
+
+types:
+  activation:
+    type: object
+    properties:
+      activationId:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+          - method: "PATCH"
+            input: "NONE"
+            output: "OPTIONAL"
+        type: string
+        enum: [CREDIT_OPERATIONS, CHECK_OPERATIONS, DEBIT_OPERATIONS]
+        (annotations.enumDescription):
+          - CREDIT_OPERATIONS: If enabled, the account can be used for performing credit operations, otherwise this functionality is disabled
+          - CHECK_OPERATIONS: If enabled, the account can be used to write checks, otherwise this functionality is disabled
+          - DEBIT_OPERATIONS: If enabled, the account can be used for performing debit operations, otherwise this functionality is disabled
+        description: |
+          Operational activation identifier.
+        required: false
+      name:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+          - method: "PATCH"
+            input: "OPTIONAL"
+            output: "OPTIONAL"
+        type: string
+        description: |
+          Operational activation description.
+        required: false
+      isActive:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+          - method: "PATCH"
+            input: "OPTIONAL"
+            output: "OPTIONAL"
+        type: boolean
+        description: |
+          Indicates whether the activation is enabled.
+        required: false
+      startDate:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "OPTIONAL"
+          - method: "PATCH"
+            input: "OPTIONAL"
+            output: "OPTIONAL"
+        type: datetime
+        format: rfc3339
+        description: |
+          String based on ISO-8601 timestamp format for specifying when the activation became temporarily disabled.
+        required: false
+      endDate:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "OPTIONAL"
+          - method: "PATCH"
+            input: "OPTIONAL"
+            output: "OPTIONAL"
+        type: datetime
+        format: rfc3339
+        description: |
+          String based on ISO-8601 timestamp format for specifying when the activation becomes enabled after temporarily disabled.
+        required: false
+      limits:
+        (annotations.bindingDefinition):
+          - method: "PATCH"
+            input: "OPTIONAL"
+            output: "OPTIONAL"
+          - method: "GET"
+            input: "NONE"
+            output: "OPTIONAL"
+        type: array
+        description: |
+          List of limits associated to the operational activation.
+        required: false
+        items:
+          properties:
+            id:
+              (annotations.bindingDefinition):
+                - method: "PATCH"
+                  input: "REQUIRED"
+                  output: "REQUIRED"
+                - method: "GET"
+                  input: "NONE"
+                  output: "REQUIRED"
+              type: string
+              description: |
+                Limit identifier.
+              required: false
+            name:
+              (annotations.bindingDefinition):
+                - method: "PATCH"
+                  input: "OPTIONAL"
+                  output: "REQUIRED"
+                - method: "GET"
+                  input: "NONE"
+                  output: "REQUIRED"
+              type: string
+              description: |
+                Limit description.
+              required: false
+            amountLimit:
+              (annotations.bindingDefinition):
+                - method: "PATCH"
+                  input: "OPTIONAL"
+                  output: "REQUIRED"
+                - method: "GET"
+                  input: "NONE"
+                  output: "REQUIRED"
+              type: object
+              description: |
+                Monetary restriction related to the operation.
+              required: false
+              properties:
+                amount:
+                  (annotations.bindingDefinition):
+                    - method: "PATCH"
+                      input: "OPTIONAL"
+                      output: "REQUIRED"
+                    - method: "GET"
+                      input: "NONE"
+                      output: "REQUIRED"
+                  type: number
+                  description: |
+                    Monetary amount related to the limit.
+                  required: false
+                currency:
+                  (annotations.bindingDefinition):
+                    - method: "PATCH"
+                      input: "OPTIONAL"
+                      output: "REQUIRED"
+                    - method: "GET"
+                      input: "NONE"
+                      output: "REQUIRED"
+                  type: string
+                  description: |
+                    String based on ISO-4217 for specifying the currency related to the amount limit.
+                  required: false
+    description: |
+      Functionality that can be enabled or disabled for a specific account.

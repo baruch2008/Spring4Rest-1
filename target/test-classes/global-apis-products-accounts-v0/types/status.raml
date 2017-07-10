@@ -1,0 +1,87 @@
+#%RAML 1.0 Library
+uses:
+  annotations:  ../../global-apis-commons-commons-v0/annotations/annotationsLibrary.raml
+
+types:
+  status:
+    type: object
+    properties:
+      id:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+          - method: "POST"
+            input: "NONE"
+            output: "REQUIRED"
+          - method: "PATCH"
+            input: "OPTIONAL"
+            output: "OPTIONAL"
+        enum: ["ABANDONED","ACTIVATED", "BLOCKED", "CANCELED","DORMANT", "ESCHEATED"]
+        (annotations.enumDescription):
+          - ABANDONED: An account that has been dormant for at least 3 years.
+          - ACTIVATED: The account is fully operative.
+          - BLOCKED: The account has been blocked by a justified reason.
+          - CANCELED: The account is canceled and the user can't operate with it.
+          - ESCHEATED: An account in an abandoned state can be moved to this state if the owner cannot be contacted. The funds are then a property of the state.
+          - DORMANT: An account that is unused for 361 days.
+        (annotations.countryException):
+          - country: US
+            description: ABANDONED,DORMANT, and ESCHEATED applies to the US
+          - country: CL 
+            description: BLOCKED does not apply to Chile. 
+        type: string
+        required: false
+        description: |
+          Identifier associated to the account status.
+      name:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+          - method: "POST"
+            input: "NONE"
+            output: "REQUIRED"
+          - method: "PATCH"
+            input: "OPTIONAL"
+            output: "OPTIONAL"
+        type: string
+        required: false
+        description: |
+          Name associated to the account status. This name is used to describe the status of the account.
+      reason:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "OPTIONAL"
+          - method: "POST"
+            input: "NONE"
+            output: "OPTIONAL"
+          - method: "PATCH"
+            input: "OPTIONAL"
+            output: "NONE"
+        enum: [DEATH, BANK_ERROR, NSF_FUNDS, INTERNAL_OFFER, EXTERNAL_OFFER, BROKERAGE_OFFER, NONCOMPETITIVE_RATE, MOVING, LEGAL, INOPERATIVE, SERVICES_LIMITED, CONSOLIDATING_ACCOUNTS, BANK_REQUEST, FRAUD, CREDIT_DENIED, CUSTOMER_REQUEST]
+        (annotations.countrySpecific):
+          - country: US
+            description: Reason is mandatory when modifying the account status in the US
+        (annotations.enumDescription):
+          - DEATH: Death of the account holder
+          - BANK_ERROR:  Bank has made an error
+          - NSF_FUNDS: Non-sufficient Funds maintained within the account balance
+          - INTERNAL_OFFER: Internal offer made that is better than the current offer
+          - EXTERNAL_OFFER: External offer made that is better than the current offer
+          - BROKERAGE_OFFER: Brokerage offer made that is better than the current offer
+          - NONCOMPETITIVE_RATE:  Rates are low compared to the competitiors
+          - MOVING: The account holder is moving
+          - LEGAL: Legal order requested to dissolve
+          - INOPERATIVE: Services not as expected
+          - SERVICES_LIMITED:  Services of the acount are limited
+          - CONSOLIDATING_ACCOUNTS: The account holder is consolidating their accounts
+          - BANK_REQUEST: BBVA reserves the right to close an account for any reason
+          - FRAUD: The account has been created with fradulent intentions
+          - CREDIT_DENIED: The account holder's credit has been denied
+          - CUSTOMER_REQUEST: The account holder request the change
+        type: string
+        required: false
+        description: |
+          Reason for transition of account statuses.

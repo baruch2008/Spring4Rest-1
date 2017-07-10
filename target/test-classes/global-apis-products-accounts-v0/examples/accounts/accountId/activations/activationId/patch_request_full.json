@@ -1,0 +1,21 @@
+{
+   "isActive":true,
+   "limits":[
+      {
+         "id":"SINGLE_OPERATION",
+         "amountLimit":{
+            "amount":200,
+            "currency":"USD"
+         }
+      },
+      {
+         "id":"WEEKLY_AGGREGATED",
+         "amountLimit":{
+            "amount":1000,
+            "currency":"USD"
+         }
+      }
+   ],
+   "startDate":"2016-01-29T12:03:26Z",
+   "endDate":"2016-01-29T13:03:26Z"
+}

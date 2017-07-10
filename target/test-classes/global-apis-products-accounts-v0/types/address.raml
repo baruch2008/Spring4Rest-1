@@ -1,0 +1,63 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../global-apis-commons-commons-v0/annotations/annotationsLibrary.raml
+  country: country.raml
+
+types:
+  address:
+    type: object
+    properties:
+      addressName:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: string
+        description: |
+          Complete address of the building.
+        required: false
+      city:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: string
+        description: |
+          City where the building is placed.
+        required: false
+      state:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: string
+        description: |
+          State, Province or Region where the building is placed.
+        required: false
+      country:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: country.country
+        description: |
+          Country where the building is placed.
+        required: false
+      zipCode:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: string
+        description: |
+          Address ZIP code.
+        required: false
+      alias:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "OPTIONAL"
+        type: string
+        description: |
+          Complete address of the building.
+        required: false  

@@ -1,0 +1,148 @@
+{
+  "data": {
+    "accountId": "6666",
+    "number": "504 12345678",
+    "numberType": {
+      "id": "LIC",
+      "name": "Local Internal Code"
+    },
+    "accountType": {
+      "id": "CREDIT_ACCOUNT",
+      "name": "Credit account."
+    },
+    "title": {
+      "id": "BONO_FACIL",
+      "name": "Bono fácil"
+    },
+    "joint" : {
+      "id" : "SINGLE",
+      "name" : "Individual"
+    },
+    "bank" : {
+      "bankId" : "0101",
+      "name" : "BBVA Continental",
+      "branch" : {
+        "branchId" : "4000",
+        "name" : "Oficina Principal"
+      }
+    },
+    "alias": "Work account",
+    "address": {
+      "addressName": "Calle Bandera 287",
+      "city": "Santiago",
+      "state": "Santiago",
+      "country": {
+        "id": "CH",
+        "name": "Chile"
+      },
+      "zipCode": "C1035AAE",
+      "alias": "Current address"
+    },
+    "openingDate": "2010-02-02",
+    "cutOffDate": "2016-07-31",
+    "status": {
+      "id": "ACTIVATED",
+      "name": "Account activated"
+    },
+    "image": {
+      "id": "IMAGE_ACCOUNT",
+      "name": "Image of the account",
+      "url": "http://.../image.jpg"
+    },
+    "currencies": [
+      {
+        "currency": "CLP",
+        "isMajor": false
+      },
+      {
+        "currency": "USD",
+        "isMajor": true
+      }
+    ],
+    "grantedCredits": [
+      {
+        "amount": 600000,
+        "currency": "CLP"
+      },
+      {
+        "amount": 3000,
+        "currency": "USD"
+      }
+    ],
+    "availableBalance": {
+      "currentBalances": [
+        {
+          "amount": 450000,
+          "currency": "CLP"
+        },
+        {
+          "amount": 500,
+          "currency": "USD"
+        }
+      ],
+      "postedBalances": [
+        {
+          "amount": 450000,
+          "currency": "CLP"
+        },
+        {
+          "amount": 550,
+          "currency": "USD"
+        }
+      ],
+      "pendingBalances": [
+        {
+          "amount": 0,
+          "currency": "CLP"
+        },
+        {
+          "amount": -50,
+          "currency": "USD"
+        }
+      ]
+    },
+    "disposedBalance": {
+      "currentBalances": [
+        {
+          "amount": 150000,
+          "currency": "CLP"
+        },
+        {
+          "amount": 2500,
+          "currency": "USD"
+        }
+      ],
+      "postedBalances": [
+        {
+          "amount": 150000,
+          "currency": "CLP"
+        },
+        {
+          "amount": 2450,
+          "currency": "USD"
+        }
+      ],
+      "pendingBalances": [
+        {
+          "amount": 0,
+          "currency": "CLP"
+        },
+        {
+          "amount": 50,
+          "currency": "USD"
+        }
+      ]
+    },
+    "participants": [
+      {
+        "participantId": "1234123276",
+        "firstName": "Ricardo",
+        "lastName": "Martin",
+        "participantType": {
+          "id": "HOLDER",
+          "name": "Holder"
+          }
+      }
+    ]
+  }
+}

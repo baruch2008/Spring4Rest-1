@@ -1,0 +1,44 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../global-apis-commons-commons-v0/annotations/annotationsLibrary.raml
+
+types:
+  period:
+    type: object
+    properties:
+      id:
+        (annotations.bindingDefinition):
+          - method: "PATCH"
+            input: "NONE"
+            output: "REQUIRED"
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+          - method: "POST"
+            input: "NONE"
+            output: "REQUIRED"
+        type: string
+        required: false
+        enum: [ ANNUALLY, MONTHLY, WEEKLY, FORTNIGHTLY ]
+        (annotations.enumDescription):
+          - ANNUALLY: Will be paid annually.
+          - MONTHLY: Will be paid monthly.
+          - WEEKLY: Will be paid weekly.
+          - FORTNIGHTLY: Will be paid fortnightly.
+        description: |
+          Period identifier.
+      name:
+        (annotations.bindingDefinition):
+          - method: "PATCH"
+            input: "NONE"
+            output: "REQUIRED"
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+          - method: "POST"
+            input: "NONE"
+            output: "REQUIRED"
+        type: string
+        required: false
+        description: |
+          Period name.

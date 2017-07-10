@@ -1,0 +1,7 @@
+{
+  "alias": "Work account",
+  "status": {
+    "id": "CANCELED",
+    "reason": "MOVING"
+  }
+}

@@ -1,0 +1,67 @@
+#%RAML 1.0 Library
+uses:
+  annotations: ../../global-apis-commons-commons-v0/annotations/annotationsLibrary.raml
+  contractNumberType: contractNumberType.raml
+
+types:
+  contract:
+    type: object
+    properties:
+      id:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: string
+        description: |
+          Identifier associated to the contract.
+      number:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: string
+        description: |
+          Contract number.
+      numberType:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "REQUIRED"
+        type: contractNumberType.contractNumberType
+        description: |
+          Contract number type based on the financial product type.
+      product:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "OPTIONAL"
+        type: object
+        description: |
+          Financial product associated to the contract.
+        properties:
+          id:
+            (annotations.bindingDefinition):
+              - method: "GET"
+                input: "NONE"
+                output: "REQUIRED"
+            type: string
+            enum: [ACCOUNTS, CARDS, LOANS, FUNDS, DEPOSITS]
+            description: |
+              Identifier of financial product.
+          name:
+            (annotations.bindingDefinition):
+              - method: "GET"
+                input: "NONE"
+                output: "REQUIRED"
+            type: string
+            description: |
+              Financial product name.
+      alias:
+        (annotations.bindingDefinition):
+          - method: "GET"
+            input: "NONE"
+            output: "OPTIONAL"
+        type: string
+        description: |
+          Alias assigned to the contract customized by the user.

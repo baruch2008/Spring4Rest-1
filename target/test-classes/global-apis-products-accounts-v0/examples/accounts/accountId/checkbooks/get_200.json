@@ -1,0 +1,23 @@
+{
+  "data": [
+    {
+      "checkbookId": "000324",
+      "checkbookType":{
+        "id":"PROMISSORY_NOTE",
+        "name":"Promissory note"
+      },
+      "format":{
+        "id":"CONTINUOUS_PAPER",
+        "name":"Continuous paper"
+      },
+      "requestDate": "2014-03-09",
+      "deliveryDate": "2014-03-12",
+      "status":{
+        "id":"REQUEST_PROCESSED",
+        "name":"Processed request"
+      },
+      "firstCheckId": "0001",
+      "lastCheckId": "0100"
+    }
+  ]
+}
