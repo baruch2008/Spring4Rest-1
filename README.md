@@ -14,7 +14,8 @@ Quick Start
 
 Create Index and 'employees' Type
 
-```curl -XPOST localhost:9200/resource -d '{
+```
+curl -XPOST localhost:9200/resource -d '{
     "settings" : {
         "number_of_shards" : 1
     },
@@ -38,7 +39,8 @@ Create Index and 'employees' Type
 
 Insert Employees documents
 
-```curl -XPUT 'http://localhost:9200/resource/employees/1' -d '{
+```
+curl -XPUT 'http://localhost:9200/resource/employees/1' -d '{
     "id" : "01",
     "name" : "Joe",
     "age": "32",
@@ -72,7 +74,8 @@ Create Employee
 
 POST http://localhost:8080/Spring4RestIntegrationSamples/api/employees/
 
-```{
+```
+{
   "name" : "Rossy",
   "age" : 27,
   "skills" : [ {
