@@ -12,7 +12,7 @@ Quick Start
 
 ### Elasticsearch configuration
 
-Create Index and Type
+Create Index and 'employees' Type
 
 ```curl -XPOST localhost:9200/resource -d '{
     "settings" : {
@@ -33,7 +33,8 @@ Create Index and Type
             }
         }
     }
-}'```
+}'
+```
 
 Insert Employees documents
 
@@ -43,7 +44,7 @@ Insert Employees documents
     "age": "32",
     "skills" : [{"name" : "Java","experience": "10"},{
      "name" : "Oracle","experience": "5"}]    
-}'```
+}'
 
 curl -XPUT 'http://localhost:9200/resource/employees/2' -d '{
     "id" : "02",
@@ -62,12 +63,16 @@ curl -XPUT 'http://localhost:9200/resource/employees/4' -d '{
     "name" : "Sam",
     "age": "30"    
 }'
+```
 
 Mode of use
 ===========
 
+Create Employee
+
+POST http://localhost:8080/Spring4RestIntegrationSamples/api/employees/
+
 ```{
-  "id" : "AV0u1gB0CsFgAhRSCoCR",
   "name" : "Rossy",
   "age" : 27,
   "skills" : [ {
@@ -77,4 +82,5 @@ Mode of use
     "name" : "DB2",
     "experience" : 5
   } ]
-} ]```
+} ]
+```
