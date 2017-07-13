@@ -92,3 +92,20 @@ POST http://localhost:8080/Spring4RestIntegrationSamples/api/employees/
   ]
 }
 ```
+Get All Employees
+
+GET http://localhost:8080/Spring4RestIntegrationSamples/api/employees/
+
+Filter Employees
+
+by Name
+
+GET http://localhost:8080/Spring4RestIntegrationSamples/api/employees/?name=foo
+
+Get Employee by ID
+
+GET http://localhost:8080/Spring4RestIntegrationSamples/api/employees/01
+
+Delete Employee
+
+DETELE http://localhost:8080/Spring4RestIntegrationSamples/api/employees/05

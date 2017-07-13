@@ -16,6 +16,7 @@ import org.springframework.stereotype.Controller;
 
 import com.javahash.spring.model.Employee;
 import com.javahash.spring.service.IEmployeesService;
+import com.javahash.spring.util.IterableUtils;
 import com.javahash.spring.util.RestPreconditions;
 
 @Controller
@@ -38,8 +39,9 @@ public class EmployeesController {
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Iterable<Employee> findAll(@QueryParam("name") final String name){
+	public Response findAll(@QueryParam("name") final String name){
 		System.out.println("findAllEmployee init");
+		Integer responseStatus = 200;
 		Iterable<Employee> findAllResult = null;
 		if(name == null){
 			findAllResult = employeeService.findAll();
@@ -47,8 +49,14 @@ public class EmployeesController {
 		}
 		else{
 			findAllResult = employeeService.findEmployeeByName(name);
-		}		
-		return findAllResult;
+		}
+		
+		if(findAllResult != null && IterableUtils.size(findAllResult) < 1){
+			//no hay resultados en la busqueda
+			responseStatus = 204;
+		}
+		
+		return Response.status(responseStatus).entity(findAllResult).build();
 	}
 	
 	@GET
@@ -61,7 +69,7 @@ public class EmployeesController {
 	
 	@DELETE
 	@Path("/{employeeId}")
-	public Response deleteMsg(@PathParam("employeeId") String employeeId) {
+	public Response deleteEmployee(@PathParam("employeeId") String employeeId) {
 		employeeService.delete(employeeId);
 		String output = "DELETE: " + employeeId;
 		return Response.status(204).entity(output).build();
