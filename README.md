@@ -1,11 +1,13 @@
 # Spring4 REST, JAX-RS, Jersey, Spring Data, Elasticsearch Integration Sample
 
+```
 -spring 4.1.5
 -javax.ws.rs 2.0.1
 -jersey-spring3 2.22.1
 -spring-data-elasticsearch 1.3.2.RELEASE
 
 Elasticsearch 1.5.2
+```
 
 Quick Start
 ===========
@@ -76,14 +78,17 @@ POST http://localhost:8080/Spring4RestIntegrationSamples/api/employees/
 
 ```
 {
-  "name" : "Rossy",
-  "age" : 27,
-  "skills" : [ {
-    "name" : "REST",
-    "experience" : 2
-  }, {
-    "name" : "DB2",
-    "experience" : 5
-  } ]
-} ]
+  "name": "Rossy",
+  "age": 27,
+  "skills": [
+    {
+      "name": "REST",
+      "experience": 2
+    },
+    {
+      "name": "DB2",
+      "experience": 5
+    }
+  ]
+}
 ```
