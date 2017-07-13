@@ -12,7 +12,9 @@ Quick Start
 
 ### Elasticsearch configuration
 
-curl -XPOST localhost:9200/resource -d '{
+Create Index and Type
+
+```curl -XPOST localhost:9200/resource -d '{
     "settings" : {
         "number_of_shards" : 1
     },
@@ -31,15 +33,17 @@ curl -XPOST localhost:9200/resource -d '{
             }
         }
     }
-}'
+}'```
 
-curl -XPUT 'http://localhost:9200/resource/employees/1' -d '{
+Insert Employees documents
+
+```curl -XPUT 'http://localhost:9200/resource/employees/1' -d '{
     "id" : "01",
     "name" : "Joe",
     "age": "32",
     "skills" : [{"name" : "Java","experience": "10"},{
      "name" : "Oracle","experience": "5"}]    
-}'
+}'```
 
 curl -XPUT 'http://localhost:9200/resource/employees/2' -d '{
     "id" : "02",
@@ -58,3 +62,19 @@ curl -XPUT 'http://localhost:9200/resource/employees/4' -d '{
     "name" : "Sam",
     "age": "30"    
 }'
+
+Mode of use
+===========
+
+```{
+  "id" : "AV0u1gB0CsFgAhRSCoCR",
+  "name" : "Rossy",
+  "age" : 27,
+  "skills" : [ {
+    "name" : "REST",
+    "experience" : 2
+  }, {
+    "name" : "DB2",
+    "experience" : 5
+  } ]
+} ]```
