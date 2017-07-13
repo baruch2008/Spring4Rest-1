@@ -10,6 +10,8 @@ Elasticsearch 1.5.2
 Quick Start
 ===========
 
+### Elasticsearch configuration
+
 curl -XPOST localhost:9200/resource -d '{
     "settings" : {
         "number_of_shards" : 1
