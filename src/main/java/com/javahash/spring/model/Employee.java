@@ -2,6 +2,9 @@ package com.javahash.spring.model;
 
 import java.util.List;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
@@ -12,7 +15,9 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 public class Employee {
 	@Id
 	private String id;
+	@NotNull
 	private String name;
+	@Min(1)
 	private Integer age;
 
     @Field( type = FieldType.Nested)

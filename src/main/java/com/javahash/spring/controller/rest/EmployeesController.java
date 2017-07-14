@@ -1,5 +1,8 @@
 package com.javahash.spring.controller.rest;
 
+import java.util.Set;
+
+import javax.validation.ConstraintViolation;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -32,9 +35,22 @@ public class EmployeesController {
 	public Response create( Employee resource ){
 		System.out.println(resource + " init");
 		RestPreconditions.checkNotNull( resource );
-		employeeService.create(resource);
-		System.out.println(" resource created");
-		return Response.status(200).entity(resource).build();		
+		Set<ConstraintViolation<Object>> violations 
+		= RestPreconditions.validateEntity(resource);
+		
+		if(violations.isEmpty()){
+			employeeService.create(resource);
+			System.out.println(" resource created");
+			return Response.status(200).entity(resource).build();	
+		} 
+		else {
+			StringBuffer sb = new StringBuffer();
+			for (ConstraintViolation<Object> constraintViolation : violations) {
+				sb.append("property [" + constraintViolation.getPropertyPath() + "] "
+						+ constraintViolation.getMessage() + "\n");
+			}
+			return Response.status(400).entity(sb.toString()).build(); 
+		}
 	}
 	
 	@GET
